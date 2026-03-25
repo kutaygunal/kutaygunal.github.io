@@ -451,6 +451,36 @@ nav a:hover {
   }
 }
 
+.site-footer {
+  margin-top: 36px;
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
 @media (max-width: 760px) {
   .site-shell {
     width: min(100% - 20px, 1180px);
@@ -498,5 +528,10 @@ nav a:hover {
 
   .device-stack img:nth-child(2) {
     transform: translateY(0);
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
