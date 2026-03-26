@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Posturist</title>
+  <meta name="description" content="Contact Posturist by email for support, feedback, business inquiries, or questions about the app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Posturist home">
+        <img src="assets/app-icon.png" alt="Posturist app icon" />
+        <span>Posturist</span>
+      </a>
+      <div class="topbar-right">
+        <nav>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#program">Program</a>
+          <a href="index.html#gallery">Screens</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="lang-combobox">
+          <span class="lang-icon" aria-hidden="true">🌐</span>
+          <select aria-label="Language selector" onchange="window.location.href=this.value">
+            <option value="contact.html" selected>🇺🇸 English</option>
+            <option value="contact-tr.html">🇹🇷 Türkçe</option>
+            <option value="contact-de.html">🇩🇪 Deutsch</option>
+            <option value="contact-es.html">🇪🇸 Español</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-card">
+        <div class="eyebrow">Contact Posturist</div>
+        <h1>Need help, support, or want to get in touch?</h1>
+        <p>
+          For app support, feedback, partnership requests, or any questions about Posturist,
+          you can contact us directly by email.
+        </p>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:kutaygunal@outlook.com">Send email</a>
+          <a class="button secondary" href="index.html">Back to home</a>
+        </div>
+        <div class="contact-meta">
+          <strong>Email:</strong> kutaygunal@outlook.com
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© Posturist</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
