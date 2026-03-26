@@ -22,13 +22,16 @@
           <a href="#features">Özellikler</a>
           <a href="#program">Program</a>
           <a href="#gallery">Ekranlar</a>
-          <a href="#cta">İndir</a>
+          <a href="#cta">İletişim</a>
         </nav>
-        <div class="lang-switcher" aria-label="Dil seçici">
-          <a href="index.html" lang="en">EN</a>
-          <a class="active" href="tr.html" lang="tr">TR</a>
-          <a href="de.html" lang="de">DE</a>
-          <a href="es.html" lang="es">ES</a>
+        <div class="lang-combobox">
+          <span class="lang-icon" aria-hidden="true">🌐</span>
+          <select aria-label="Dil seçici" onchange="window.location.href=this.value">
+            <option value="index.html">🇺🇸 English</option>
+            <option value="tr.html" selected>🇹🇷 Türkçe</option>
+            <option value="de.html">🇩🇪 Deutsch</option>
+            <option value="es.html">🇪🇸 Español</option>
+          </select>
         </div>
       </div>
     </header>
@@ -44,7 +47,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#cta">Uygulamayı edin</a>
+            <a class="button primary" href="#cta">İletişim</a>
             <a class="button secondary" href="#gallery">Ekran görüntülerini gör</a>
           </div>
 

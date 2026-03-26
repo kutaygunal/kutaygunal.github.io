@@ -22,13 +22,16 @@
           <a href="#features">Funktionen</a>
           <a href="#program">Programm</a>
           <a href="#gallery">Screens</a>
-          <a href="#cta">Download</a>
+          <a href="#cta">Kontakt</a>
         </nav>
-        <div class="lang-switcher" aria-label="Sprachauswahl">
-          <a href="index.html" lang="en">EN</a>
-          <a href="tr.html" lang="tr">TR</a>
-          <a class="active" href="de.html" lang="de">DE</a>
-          <a href="es.html" lang="es">ES</a>
+        <div class="lang-combobox">
+          <span class="lang-icon" aria-hidden="true">🌐</span>
+          <select aria-label="Sprachauswahl" onchange="window.location.href=this.value">
+            <option value="index.html">🇺🇸 English</option>
+            <option value="tr.html">🇹🇷 Türkçe</option>
+            <option value="de.html" selected>🇩🇪 Deutsch</option>
+            <option value="es.html">🇪🇸 Español</option>
+          </select>
         </div>
       </div>
     </header>
@@ -44,7 +47,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#cta">App holen</a>
+            <a class="button primary" href="#cta">Kontakt</a>
             <a class="button secondary" href="#gallery">Screenshots ansehen</a>
           </div>
 
