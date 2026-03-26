@@ -13,17 +13,11 @@
 <body>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Posturist home">
-        <img src="assets/app-icon.png" alt="Posturist app icon" />
-        <span>Posturist</span>
-      </a>
-      <div class="topbar-right">
-        <nav>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#program">Program</a>
-          <a href="index.html#gallery">Screens</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <div class="topbar-main">
+        <a class="brand" href="index.html" aria-label="Posturist home">
+          <img src="assets/app-icon.png" alt="Posturist app icon" />
+          <span>Posturist</span>
+        </a>
         <div class="lang-combobox">
           <span class="lang-icon" aria-hidden="true">🌐</span>
           <select aria-label="Language selector" onchange="window.location.href=this.value">
@@ -34,6 +28,12 @@
           </select>
         </div>
       </div>
+      <nav>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#gallery">Screens</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main class="contact-page">
@@ -47,9 +47,6 @@
         <div class="contact-actions">
           <a class="button primary" href="mailto:kutaygunal@outlook.com">Send email</a>
           <a class="button secondary" href="index.html">Back to home</a>
-        </div>
-        <div class="contact-meta">
-          <strong>Email:</strong> kutaygunal@outlook.com
         </div>
       </section>
     </main>
