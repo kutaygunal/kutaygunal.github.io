@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kutay Gunal — Projects</title>
+  <meta name="description" content="A minimalist showcase of Kutay Gunal's GitHub projects." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div>
+          <h1 class="name">Kutay Gunal</h1>
+          <p class="tagline">Systems, ML &amp; web — open-source work.</p>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="icon" aria-hidden="true">☾</span>
+          <span class="label">Theme</span>
+        </button>
+      </div>
+      <nav class="tabs" aria-label="Sections">
+        <button class="tab is-active" data-tab="projects">Projects</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="view is-active">
+      <div class="controls">
+        <input
+          type="search"
+          id="search"
+          class="search"
+          placeholder="Search projects…"
+          aria-label="Search projects"
+        />
+        <div id="filters" class="filters" aria-label="Filter by language"></div>
+      </div>
+      <div id="project-grid" class="grid"></div>
+      <p id="empty-state" class="empty" hidden>No projects match your search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="https://github.com/kutaygunal" target="_blank" rel="noopener">github.com/kutaygunal</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
