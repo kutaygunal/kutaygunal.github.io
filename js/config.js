@@ -2,13 +2,31 @@
    Config — edit this file to customize the site.
    ============================================================ */
 
-// Your GitHub username (used by the live dashboard).
+// Your GitHub username.
 const GITHUB_USER = "kutaygunal";
 
+// Profile — powers the header nameplate, hero readout, and contact panel.
+const PROFILE = {
+  name: "Kutay Gunal",
+  handle: "kutaygunal",
+  role: "lead_software_engineer @ siemens",
+  focus: "simulation platforms · AI-driven tooling",
+  location: "Fort Lauderdale, FL",
+  status: "OPERATIONAL",
+  bio:
+    "By day: C++/Qt simulation platforms and AI-driven engineering tools at Siemens. " +
+    "By night: whatever's interesting enough to keep me up — parsers, compression, " +
+    "flight software, the occasional habit tracker. Logged here as they ship.",
+  yearsExperience: 10,
+  stack: ["C++", "Qt", "Python", ".NET", "C#", "OpenCascade", "LLM/AI"],
+  email: "kutaygunal@outlook.com",
+  github: "https://github.com/kutaygunal",
+  linkedin: "https://www.linkedin.com/in/kutaygunal/",
+};
+
 // Curated project data for the showcase.
-// Add/remove entries here. Fields:
-//   name (repo name, used by dashboard), title (display name),
-//   description, url, language, tags[], featured (bool)
+// Fields: name (repo), title (display name), description, url, language,
+//   tags[], featured (bool), status, category (drives the spec-sheet icon).
 const PROJECTS = [
   {
     name: "healthcare-revenue-risk-predictor",
@@ -18,7 +36,8 @@ const PROJECTS = [
     language: "Python",
     tags: ["ML", "Dashboard", "Data"],
     featured: true,
-    image: "assets/card_ml.png",
+    status: "SHIPPED",
+    category: "ai",
   },
   {
     name: "kzip",
@@ -28,7 +47,8 @@ const PROJECTS = [
     language: "Rust",
     tags: ["Systems", "Compression"],
     featured: true,
-    image: "assets/card_zip.png",
+    status: "SHIPPED",
+    category: "compression",
   },
   {
     name: "CSV-Arrow-Parser",
@@ -38,7 +58,8 @@ const PROJECTS = [
     language: "C++",
     tags: ["Systems", "Data"],
     featured: true,
-    image: "assets/card_csv.png",
+    status: "SHIPPED",
+    category: "data",
   },
   {
     name: "AEGIS-PERC",
@@ -47,7 +68,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/AEGIS-PERC",
     language: "C++",
     tags: ["Systems"],
-    image: "assets/card_aegis.png",
+    status: "SHIPPED",
+    category: "systems",
   },
   {
     name: "Aegis-GCS",
@@ -56,7 +78,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/Aegis-GCS",
     language: "C++",
     tags: ["Systems"],
-    image: "assets/card_gcs.png",
+    status: "SHIPPED",
+    category: "telemetry",
   },
   {
     name: "AeroVerify",
@@ -65,7 +88,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/AeroVerify",
     language: "C#",
     tags: [".NET", "Desktop"],
-    image: "assets/card_aero.png",
+    status: "SHIPPED",
+    category: "desktop",
   },
   {
     name: "BookTranslator",
@@ -74,7 +98,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/BookTranslator",
     language: "C#",
     tags: [".NET", "Desktop", "AI"],
-    image: "assets/card_book.png",
+    status: "SHIPPED",
+    category: "ai",
   },
   {
     name: "sorting-algorithm-visualizer",
@@ -83,7 +108,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/sorting-algorithm-visualizer",
     language: "JavaScript",
     tags: ["Web", "Visualization"],
-    image: "assets/card_sort.png",
+    status: "SHIPPED",
+    category: "visualization",
   },
   {
     name: "habit_coin",
@@ -92,7 +118,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/habit_coin",
     language: "HTML",
     tags: ["Web", "Productivity"],
-    image: "assets/card_habit.png",
+    status: "SHIPPED",
+    category: "productivity",
   },
   {
     name: "dark-mode-icon-enhancer",
@@ -101,7 +128,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/dark-mode-icon-enhancer",
     language: "Python",
     tags: ["Desktop", "Tools"],
-    image: "assets/card_dark.png",
+    status: "SHIPPED",
+    category: "desktop",
   },
   {
     name: "NASA_API",
@@ -110,7 +138,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/NASA_API",
     language: "JavaScript",
     tags: ["Web", "API"],
-    image: "assets/card_nasa.png",
+    status: "SHIPPED",
+    category: "api",
   },
   {
     name: "Posturist-Website",
@@ -119,7 +148,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/Posturist-Website",
     language: "HTML",
     tags: ["Web", "Health"],
-    image: "assets/card_posturist.png",
+    status: "SHIPPED",
+    category: "health",
   },
   {
     name: "VistaCAD",
@@ -128,7 +158,8 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/VistaCAD",
     language: "C++",
     tags: ["Systems", "3D"],
-    image: "assets/card_vista.png",
+    status: "SHIPPED",
+    category: "3d",
   },
   {
     name: "SocialOwls",
@@ -137,6 +168,7 @@ const PROJECTS = [
     url: "https://github.com/kutaygunal/SocialOwls",
     language: "JavaScript",
     tags: ["Web", "Angular"],
-    image: "assets/card_owls.png",
+    status: "SHIPPED",
+    category: "component",
   },
 ];
