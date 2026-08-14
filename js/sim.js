@@ -28,6 +28,7 @@
   let W = 0, H = 0, DPR = 1;
   let particles = [];
   let mode = "attract"; // "attract" | "repel"
+  const RADIUS = 110; // pointer interaction circle radius (half of the original 220)
   let pointer = { x: null, y: null, active: false };
   let running = false;
   let rafId = null;
@@ -77,8 +78,8 @@
         const dy = pointer.y - p.y;
         const distSq = dx * dx + dy * dy;
         const dist = Math.sqrt(distSq) || 1;
-        if (dist < 220) {
-          const force = (1 - dist / 220) * 0.045 * (mode === "attract" ? 1 : -1);
+        if (dist < RADIUS) {
+          const force = (1 - dist / RADIUS) * 0.045 * (mode === "attract" ? 1 : -1);
           p.vx += (dx / dist) * force;
           p.vy += (dy / dist) * force;
         }
@@ -122,7 +123,7 @@
       let near = false;
       if (pointer.active) {
         const dx = pointer.x - p.x, dy = pointer.y - p.y;
-        near = dx * dx + dy * dy < 220 * 220;
+        near = dx * dx + dy * dy < RADIUS * RADIUS;
       }
       ctx.fillStyle = near ? "#ffb020" : "rgba(41, 211, 255, 0.85)";
       ctx.beginPath();
@@ -135,7 +136,7 @@
       ctx.strokeStyle = "rgba(255, 176, 32, 0.5)";
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.arc(pointer.x, pointer.y, 220, 0, Math.PI * 2);
+      ctx.arc(pointer.x, pointer.y, RADIUS, 0, Math.PI * 2);
       ctx.stroke();
     }
   }
