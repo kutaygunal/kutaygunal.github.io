@@ -40,6 +40,17 @@ const PROJECTS = [
     category: "ai",
   },
   {
+    name: "LaTeXOCR",
+    title: "LaTeX OCR",
+    description: "Converts images of LaTeX into LaTeX text using a vision-language model.",
+    url: "https://github.com/kutaygunal/LaTeXOCR",
+    language: "Python",
+    tags: ["AI", "OCR", "LaTeX"],
+    featured: true,
+    status: "SHIPPED",
+    category: "ai",
+  },
+  {
     name: "kzip",
     title: "Kzip",
     description: "High-performance compression tool that builds fast, drop-in-compatible ZIPs in Rust.",
