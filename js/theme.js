@@ -1,13 +1,15 @@
 /* ============================================================
    Theme toggle — light / dark with localStorage persistence.
-   Respects prefers-color-scheme on first load (no saved choice).
+   Dark is this design's primary mode (the instrument panel reads
+   as dark hardware), so it's the default until the visitor picks
+   light explicitly — OS preference doesn't override that.
    ============================================================ */
 
 (function () {
   const STORAGE_KEY = "theme";
   const root = document.documentElement;
 
-  // Resolve the effective theme: saved choice, else OS preference.
+  // Resolve the effective theme: saved choice, else dark by default.
   function getSaved() {
     try {
       return localStorage.getItem(STORAGE_KEY);
@@ -16,14 +18,10 @@
     }
   }
 
-  function systemPrefersDark() {
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-
   function currentTheme() {
     const saved = getSaved();
     if (saved === "light" || saved === "dark") return saved;
-    return systemPrefersDark() ? "dark" : "light";
+    return "dark";
   }
 
   function apply(theme) {

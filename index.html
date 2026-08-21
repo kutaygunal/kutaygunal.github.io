@@ -3,56 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kutay Gunal — Projects</title>
-  <meta name="description" content="A minimalist showcase of Kutay Gunal's GitHub projects." />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/theme.js"></script>
+  <title>Kutay Gunal — Weekend Build Log</title>
+  <meta name="description" content="Kutay Gunal — Lead Software Engineer. Simulation platforms and AI tooling by day; a running log of weekend builds." />
+  <meta name="theme-color" content="#0a0d0f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kutay Gunal — Weekend Build Log" />
+  <meta property="og:description" content="Lead Software Engineer. Simulation platforms and AI tooling by day; a running log of weekend builds." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon-lab.svg" />
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <script src="js/theme.js?v=2"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <div>
-          <h1 class="name">Kutay Gunal</h1>
-          <p class="tagline">Systems, ML &amp; web — open-source work.</p>
-        </div>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="toolbar" id="toolbar">
+    <div class="container toolbar-bar">
+      <a href="#top" class="wordmark">
+        <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="var(--panel)"/>
+          <path d="M3 17 L9 17 L12 9 L16 24 L19 14 L22 17 L29 17" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="29" cy="17" r="1.6" fill="var(--accent-2)"/>
+        </svg>
+        <span>KUTAY.GUNAL</span>
+      </a>
+
+      <nav class="toolbar-nav" aria-label="Primary">
+        <a href="#about" data-nav="about"><em>01</em>ABOUT</a>
+        <a href="#work" data-nav="work"><em>02</em>WORK</a>
+        <a href="#contact" data-nav="contact"><em>03</em>CONTACT</a>
+      </nav>
+
+      <div class="toolbar-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
           <span class="icon" aria-hidden="true">☾</span>
-          <span class="label">Theme</span>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
       </div>
-      <nav class="tabs" aria-label="Sections">
-        <button class="tab is-active" data-tab="projects">Projects</button>
-      </nav>
     </div>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+      <a href="#about" data-nav="about">01 // ABOUT</a>
+      <a href="#work" data-nav="work">02 // WORK</a>
+      <a href="#contact" data-nav="contact">03 // CONTACT</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <!-- ============ PROJECTS ============ -->
-    <section id="projects" class="view is-active">
-      <div class="controls">
-        <input
-          type="search"
-          id="search"
-          class="search"
-          placeholder="Search projects…"
-          aria-label="Search projects"
-        />
-        <div id="filters" class="filters" aria-label="Filter by language"></div>
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span id="hero-status">STATUS: OPERATIONAL</span></p>
+          <h1 class="hero-name" id="hero-name">Kutay Gunal</h1>
+          <p class="hero-role" id="hero-role">lead_software_engineer @ siemens</p>
+          <p class="hero-bio" id="hero-bio">Loading…</p>
+          <div class="hero-stack" id="hero-stack" aria-label="Primary stack"></div>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">// VIEW_WORK</a>
+            <a href="#contact" class="btn btn-ghost">// CONTACT</a>
+          </div>
+        </div>
+
+        <div class="panel sim-panel" id="sim-panel">
+          <div class="panel-titlebar">
+            <span class="panel-title">SIM.01 — PARTICLE FIELD</span>
+            <span class="panel-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="panel-screen">
+            <canvas id="sim-canvas" aria-hidden="true"></canvas>
+            <div class="hud" aria-hidden="true">
+              <span>N <b id="hud-count">0</b></span>
+              <span>FPS <b id="hud-fps">0</b></span>
+              <span>X <b id="hud-x">0</b></span>
+              <span>Y <b id="hud-y">0</b></span>
+              <span>MODE <b id="hud-mode">ATTRACT</b></span>
+            </div>
+            <button id="sim-play" class="sim-play-overlay" type="button" hidden>▶ RUN SIMULATION</button>
+          </div>
+          <div class="panel-controls">
+            <button class="switch is-active" id="mode-attract" type="button">ATTRACT</button>
+            <button class="switch" id="mode-repel" type="button">REPEL</button>
+            <button class="switch switch-reset" id="sim-reset" type="button">RESET</button>
+          </div>
+        </div>
       </div>
-      <div id="project-grid" class="grid"></div>
-      <p id="empty-state" class="empty" hidden>No projects match your search.</p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-head"><span class="tag-num">§ 01</span>ABOUT</h2>
+        <div class="stats" id="stats" aria-label="At a glance"></div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+      <div class="container">
+        <h2 class="section-head"><span class="tag-num">§ 02</span>WORK</h2>
+
+        <div class="controls">
+          <div class="term-search">
+            <span class="term-prompt" aria-hidden="true">grep --lang=</span>
+            <input
+              type="search"
+              id="search"
+              class="search"
+              placeholder="all"
+              aria-label="Search projects"
+            />
+            <span class="term-cursor" aria-hidden="true"></span>
+          </div>
+          <div id="filters" class="filters" aria-label="Filter by language"></div>
+        </div>
+        <div id="project-grid" class="grid"></div>
+        <p id="empty-state" class="empty" hidden>// no matches — try a different query</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-head"><span class="tag-num">§ 03</span>CONTACT</h2>
+        <div class="nameplate">
+          <div class="nameplate-row"><span class="nameplate-key">OPERATOR</span><span class="nameplate-val" id="np-name">—</span></div>
+          <div class="nameplate-row"><span class="nameplate-key">ROLE</span><span class="nameplate-val" id="np-role">—</span></div>
+          <div class="nameplate-row"><span class="nameplate-key">LOCATION</span><span class="nameplate-val" id="np-location">—</span></div>
+          <div class="nameplate-row"><span class="nameplate-key">CONTACT</span><span class="nameplate-val" id="np-email">—</span></div>
+          <div class="nameplate-row"><span class="nameplate-key">LINKS</span><span class="nameplate-val" id="np-links">—</span></div>
+          <a href="#" id="np-cta" class="btn btn-primary nameplate-cta">// SEND_TRANSMISSION</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <a href="https://github.com/kutaygunal" target="_blank" rel="noopener">github.com/kutaygunal</a>
+    <div class="container footer-bar">
+      <span>BUILD <span id="build-date"></span> · STATUS: OPERATIONAL</span>
+      <span>© <span id="year"></span> Kutay Gunal</span>
     </div>
   </footer>
 
-  <script src="js/config.js"></script>
-  <script src="js/app.js"></script>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>^</button>
+
+  <script src="js/config.js?v=2"></script>
+  <script src="js/sim.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>
