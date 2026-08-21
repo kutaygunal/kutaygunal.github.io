@@ -29,6 +29,17 @@ const PROFILE = {
 //   tags[], featured (bool), status, category (drives the spec-sheet icon).
 const PROJECTS = [
   {
+    name: "OptiForge",
+    title: "OptiForge",
+    description: "AI-powered generative lens design: turn focal length, pupil, field, and waveband specs into a ranked set of viable starting-point lens sequences.",
+    url: "https://github.com/kutaygunal/OptiForge",
+    language: "Python",
+    tags: ["AI", "Optics", "Generative"],
+    featured: true,
+    status: "SHIPPED",
+    category: "ai",
+  },
+  {
     name: "healthcare-revenue-risk-predictor",
     title: "Healthcare Revenue Risk Predictor",
     description: "ML model + interactive dashboard to predict healthcare revenue risk.",
