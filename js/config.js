@@ -29,6 +29,17 @@ const PROFILE = {
 //   tags[], featured (bool), status, category (drives the spec-sheet icon).
 const PROJECTS = [
   {
+    name: "cpp-interview-prep",
+    title: "C++ Interview Quest",
+    description: "Gamified C++ interview prep: battle through OOP, data structures, modern C++, design patterns, and interview Q&A worlds. Earn XP, build combos, beat boss questions.",
+    url: "/cpp-interview-prep/",
+    language: "JavaScript",
+    tags: ["C++", "Interview", "Game"],
+    featured: true,
+    status: "SHIPPED",
+    category: "game",
+  },
+  {
     name: "OptiForge",
     title: "OptiForge",
     description: "AI-powered generative lens design: turn focal length, pupil, field, and waveband specs into a ranked set of viable starting-point lens sequences.",

@@ -21,6 +21,7 @@
     health: '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2.5 10.5h4l1.5-4 3 7 1.5-3h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     "3d": '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2.5 17 6.5v7L10 17.5 3 13.5v-7L10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M3 6.5 10 10.5 17 6.5M10 10.5v7" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>',
     component: '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="11" width="6" height="6" stroke="currentColor" stroke-width="1.5"/></svg>',
+    game: '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2.5" y="6" width="15" height="8" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 9v2M5.5 10h2M13.5 9.5h.01M15.5 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
   };
   const DEFAULT_ICON = CATEGORY_ICONS.systems;
 

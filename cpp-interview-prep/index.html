@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Interview Quest — Keysight Prep</title>
+  <meta name="description" content="A gamified C++ interview prep app: battle through OOP, data structures, modern C++, design patterns, and interview Q&A." />
+  <meta name="theme-color" content="#0a0d0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=1" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ============ TITLE ============ -->
+  <section id="screen-title" class="screen active">
+    <div class="title-inner">
+      <div class="logo">C++</div>
+      <h1 class="game-title">INTERVIEW <span>QUEST</span></h1>
+      <p class="subtitle">Keysight · Optical Design Engineering · Senior Software Engineer</p>
+      <p class="tagline">Battle through 5 worlds of C++ knowledge. Earn XP. Beat the bosses. Get hired.</p>
+
+      <div class="player-card">
+        <div class="player-row">
+          <span>LEVEL <b id="title-level">1</b></span>
+          <span>XP <b id="title-xp">0</b></span>
+          <span>BADGES <b id="title-ach">0 / 12</b></span>
+        </div>
+        <div class="xpbar"><div class="xpbar-fill" id="title-xpbar"></div></div>
+        <div class="xpbar-label" id="title-xpbar-label">0 / 100 XP</div>
+      </div>
+
+      <div class="title-actions">
+        <button id="btn-play" class="btn btn-primary">▶ START QUEST</button>
+        <button id="btn-ach" class="btn btn-ghost">🏆 BADGES</button>
+        <button id="btn-reset" class="btn btn-danger">↺ RESET</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORLD SELECT ============ -->
+  <section id="screen-world" class="screen">
+    <div class="topbar">
+      <button id="back-title" class="btn btn-ghost small">← TITLE</button>
+      <span class="topbar-title">SELECT WORLD</span>
+      <span class="topbar-xp" id="world-xp">0 XP</span>
+    </div>
+    <div class="container">
+      <h2 class="section-head">CHOOSE YOUR <span>WORLD</span></h2>
+      <p class="section-sub">Each world has 10 questions and a final boss. 3 lives. Answer fast for bonus XP.</p>
+      <div id="world-grid" class="world-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ BATTLE ============ -->
+  <section id="screen-battle" class="screen">
+    <div class="topbar">
+      <button id="back-world" class="btn btn-ghost small">← WORLDS</button>
+      <span class="topbar-title" id="battle-world">WORLD</span>
+      <span class="topbar-xp" id="battle-xp">0 XP</span>
+    </div>
+
+    <div class="hud">
+      <div class="hud-item"><span class="hud-label">LIVES</span><span id="battle-lives" class="hud-lives">♥♥♥</span></div>
+      <div class="hud-item"><span class="hud-label">COMBO</span><span id="battle-combo" class="hud-combo"></span></div>
+      <div class="hud-item"><span class="hud-label">PROGRESS</span><span id="battle-progress">1 / 11</span></div>
+      <div class="hud-item timer-box">
+        <svg class="timer-svg" viewBox="0 0 50 50">
+          <circle class="timer-bg" cx="25" cy="25" r="22" />
+          <circle class="timer-ring" id="timer-ring" cx="25" cy="25" r="22" />
+        </svg>
+        <span id="timer" class="timer-num">30</span>
+      </div>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="battle-bar"></div></div>
+
+    <div class="question-card">
+      <div class="q-head">
+        <span id="q-badge" class="q-badge">Q1</span>
+        <span id="gain" class="gain"></span>
+      </div>
+      <p id="q-text" class="q-text"></p>
+      <div id="q-options" class="q-options"></div>
+      <div id="explain" class="explain"></div>
+      <button id="next-btn" class="btn btn-primary next hidden">NEXT →</button>
+    </div>
+
+    <div class="powerups">
+      <button id="pu-fifty" class="pu">🎯 50/50 <span id="pu-fifty-count">2</span></button>
+      <button id="pu-skip" class="pu">⏭ SKIP <span id="pu-skip-count">2</span></button>
+      <button id="pu-hint" class="pu">💡 HINT <span id="pu-hint-count">2</span></button>
+    </div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section id="screen-result" class="screen">
+    <div class="result-inner">
+      <h2 id="result-title" class="result-title">WORLD CLEARED!</h2>
+      <div class="result-world" id="result-world">OOP</div>
+      <div class="result-stats">
+        <div class="stat"><span class="stat-num" id="result-score">0</span><span class="stat-label">SCORE</span></div>
+        <div class="stat"><span class="stat-num" id="result-correct">0</span><span class="stat-label">CORRECT</span></div>
+        <div class="stat"><span class="stat-num" id="result-combo">x0</span><span class="stat-label">COMBO</span></div>
+      </div>
+      <div class="result-total" id="result-total">Total: 0 XP · Level 1</div>
+      <div class="result-actions">
+        <button id="retry" class="btn btn-ghost">↺ RETRY</button>
+        <button id="worlds-btn" class="btn btn-primary">WORLDS →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section id="screen-achieve" class="screen">
+    <div class="topbar">
+      <button id="back-title2" class="btn btn-ghost small">← TITLE</button>
+      <span class="topbar-title">BADGES</span>
+      <span class="topbar-xp" id="ach-xp">0 XP</span>
+    </div>
+    <div class="container">
+      <h2 class="section-head">ACHIEVEMENT <span>BADGES</span></h2>
+      <div id="ach-grid" class="ach-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TOAST ============ -->
+  <div id="toast" class="toast"></div>
+
+  <script src="js/data.js?v=1"></script>
+  <script src="js/game.js?v=1"></script>
+</body>
+</html>
