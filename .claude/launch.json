@@ -4,8 +4,8 @@
     {
       "name": "weekend-projects-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["dev_server.py", "8000"],
-      "port": 8000
+      "runtimeArgs": ["dev_server.py", "8090"],
+      "port": 8090
     }
   ]
 }
